@@ -1179,9 +1179,9 @@ func (btp *Player) InitAudio() {
 
 // InitSubtitles ...
 func (btp *Player) InitSubtitles() {
-	if btp.p.DoneSubtitles {
-		return
-	}
+	// if btp.p.DoneSubtitles {
+	// 	return
+	// }
 
 	if config.Get().OSDBIncludedEnabled && (!config.Get().OSDBIncludedSkipExists || len(btp.xbmcHost.PlayerGetSubtitles()) == 0) {
 		btp.SetSubtitles()
