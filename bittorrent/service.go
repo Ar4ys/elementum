@@ -1847,9 +1847,10 @@ func (s *Service) AttachPlayer(p *Player) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	if _, ok := s.Players[p.t.InfoHash()]; ok {
-		return
-	}
+	// TODO(ar4ys): What is this fix for???
+	// if _, ok := s.Players[p.t.InfoHash()]; ok {
+	// 	return
+	// }
 
 	s.Players[p.t.InfoHash()] = p
 }
